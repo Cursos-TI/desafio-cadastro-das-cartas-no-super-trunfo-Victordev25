@@ -51,7 +51,7 @@ int main() {
     float carta_area_1;//Tipo Float
     float carta_pib_1;//Tipo Floar
 
-
+    //Inserir densidade populacional e o PIB per capita.
 
     //Dados da Primeira Carta.
     printf("\nCarta 1: ");
@@ -76,6 +76,13 @@ int main() {
 
     printf("Quantos pontos turismo existe em %s? ", carta_nome_cidade_1);//Pergunta quantos pontos de turismo existe na cidade.
         scanf("%d", &carta_pontos_turismo_1);//Armazena a quantidade em carta_pontos_turismo_1.
+
+    //Calcular da Densidade Populacional (População dividido pelo espaço territorial):
+    float densidade_populacional_1 = carta_populacao_1 / carta_area_1;
+
+    //Calcular o PIB per capita (Divide o PIB pela sua população):
+    float pib_per_capita_1 = carta_pib_1 / carta_populacao_1;
+
 
     printf(" - Dados da Primeira Carta: Cidade %s inseridos com sucesso.\n", carta_nome_cidade_1);//Exibição de Confirmação da Primeira carta, com o nome da cidade.
 
@@ -122,6 +129,14 @@ int main() {
         scanf("%d", &carta_pontos_turismo_2);//Armazena a quantidade de pontos turisticos da Segunda Carta em carta_pontos_turismo_2.
 
 
+    
+     //Calcular da Densidade Populacional (População dividido pelo espaço territorial):
+    float densidade_populacional_2 = carta_populacao_2 / carta_area_2;
+
+    //Calcular o PIB per capita (Divide o PIB pela sua população):
+    float pib_per_capita_2 = carta_pib_2 / carta_populacao_2;
+
+
     //Exibição de Confirmação da Segunda carta, com o nome da cidade.
     printf(" - Dados da Segunda Carta: Cidade %s inseridos com sucesso.\n\n", carta_nome_cidade_2);
 
@@ -137,6 +152,12 @@ int main() {
     printf("\n - Área da Cidade: %.3f", carta_area_1);//Mostra a Área da Cidade da Primeira Carta (Com 3 Zeros após o ponto).
     printf("\n - PIB da Cidade: %.3f", carta_pib_1);//Mostra o valor do PIB da Primeira Carta (Com 3 Zeros após o ponto).
     printf("\n - Pontos Turistico da Cidade: %d", carta_pontos_turismo_1);//Mostra a quantidade de pontos turisticos da Cidade da Primeira Carta.
+    
+    printf("\n - Densidade Populacional: %.2f hab/km²", densidade_populacional_1);//Mostra a Densidade Populaconal da Cidade da Primeira Carta.
+    printf("\n - PIB per Capita: R$%.2f", pib_per_capita_1);//Mostra o PIB per Capita da Cidade da Primeira Carta.
+
+
+
 
     printf("\n\n2° Carta: \n");//Informação referente a Segunda Carta.
     printf(" - Estado da Carta: %c", carta_estado_2);//Mostra a letra Estado da Segunda Carta.
@@ -146,6 +167,9 @@ int main() {
     printf("\n - Área da Cidade: %.3f", carta_area_2);//Mostra a Área da Cidade da Segunda Carta (Com 3 Zeros após o ponto).
     printf("\n - PIB da Cidade: %.3f", carta_pib_2);//Mostra o valor do PIB da Segunda Carta (Com 3 Zeros após o ponto).
     printf("\n - Pontos Turistico da Cidade: %d", carta_pontos_turismo_2);//Mostra a quantidade de pontos turisticos da Cidade da Segunda Carta.
+   
+    printf("\n - Densidade Populacional: %.2f hab/km²", densidade_populacional_2);//Mostra a Densidade Populaconal da Cidade da Segunda Carta.
+    printf("\n - PIB per Capita: R$%.2f", pib_per_capita_2);//Mostra o PIB per Capita da Cidade da Segunda Carta.
 
 
     printf("\nExecução finalizada.\n\n\n");
