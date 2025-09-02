@@ -221,9 +221,9 @@ int main() {
 
     float superPoder_C1, superPoder_C2;
 
-    superPoder_C1 = carta_populacao_1 + carta_area_1 + carta_pib_1 + carta_pontos_turismo_1 + densidade_populacional_1 + pib_per_capita_1;
+    superPoder_C1 = carta_populacao_1 + carta_area_1 + carta_pib_1 + carta_pontos_turismo_1 + (1/densidade_populacional_1) + pib_per_capita_1;
 
-    superPoder_C2 = carta_populacao_2 + carta_area_2 + carta_pib_2 + carta_pontos_turismo_2 + densidade_populacional_2 + pib_per_capita_2;
+    superPoder_C2 = carta_populacao_2 + carta_area_2 + carta_pib_2 + carta_pontos_turismo_2 + (1/densidade_populacional_2) + pib_per_capita_2;
 
     printf("\n\n Fatalité!! SUPER PODER!\n Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, superPoder_C1 > superPoder_C2, carta_nome_cidade_2, superPoder_C2 > superPoder_C1);
 
