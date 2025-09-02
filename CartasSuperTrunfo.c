@@ -129,7 +129,7 @@ int main() {
         scanf("%d", &carta_pontos_turismo_2);//Armazena a quantidade de pontos turisticos da Segunda Carta em carta_pontos_turismo_2.
 
 
-    
+
      //Calcular da Densidade Populacional (População dividido pelo espaço territorial):
     float densidade_populacional_2 = carta_populacao_2 / carta_area_2;
 
@@ -172,7 +172,66 @@ int main() {
     printf("\n - PIB per Capita: R$%.2f", pib_per_capita_2);//Mostra o PIB per Capita da Cidade da Segunda Carta.
 
 
-    printf("\nExecução finalizada.\n\n\n");
+/*Exemplo de Saída (após a entrada dos dados):
+
+
+        Comparação de Cartas:
+
+        1° População: Carta 1 venceu (1)
+
+        2° Área: Carta 1 venceu (1)
+
+        3° PIB: Carta 1 venceu (1)
+
+        4° Pontos Turísticos: Carta 1 venceu (1)
+
+        5° Densidade Populacional: Carta 2 venceu (0)
+
+        6° PIB per Capita: Carta 1 venceu (1)
+
+        Super Poder: Carta 1 venceu (1)*/
+
+
+
+    int roundOne_C1, roundTwo_C1, roundThree_C1, roundFour_C1, roundFive_C1, roundSix_C1;//Rounds Vitórias 1° Carta 
+
+    int roundOne_C2, roundTwo_C2, roundThree_C2, roundFour_C2, roundFive_C2, roundSix_C2;//Rounds Vitórias 2° Carta
+
+    roundOne_C1 = carta_populacao_1 > carta_populacao_2;
+    roundTwo_C1 = carta_area_1 > carta_area_2;
+    roundThree_C1 = carta_pib_1 > carta_pib_2;
+    roundFour_C1 = carta_pontos_turismo_1 > carta_pontos_turismo_2;
+    roundFive_C1 = densidade_populacional_1 < densidade_populacional_2;
+    roundSix_C1 = pib_per_capita_1 > pib_per_capita_2;
+
+    roundOne_C2 = carta_populacao_2 > carta_populacao_1;
+    roundTwo_C2 = carta_area_2 > carta_area_1;
+    roundThree_C2 = carta_pib_2 > carta_pib_1;
+    roundFour_C2 = carta_pontos_turismo_2 > carta_pontos_turismo_1;
+    roundFive_C2 = densidade_populacional_2 < densidade_populacional_1;
+    roundSix_C2 = pib_per_capita_2 > pib_per_capita_1;
+    
+
+    printf("\n\n - Pontuação:\n1°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundOne_C1, carta_nome_cidade_2, roundOne_C2);
+    printf("\n2°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundTwo_C1, carta_nome_cidade_2, roundTwo_C2);
+    printf("\n3°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundThree_C1, carta_nome_cidade_2, roundThree_C2);
+    printf("\n4°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundFour_C1, carta_nome_cidade_2, roundFour_C2);
+    printf("\n5°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundFive_C1, carta_nome_cidade_2), roundFive_C2;
+    printf("\n6°Round Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, roundSix_C1, carta_nome_cidade_2, roundSix_C2);
+
+    float superPoder_C1, superPoder_C2;
+
+    superPoder_C1 = carta_populacao_1 + carta_area_1 + carta_pib_1 + carta_pontos_turismo_1 + densidade_populacional_1 + pib_per_capita_1;
+
+    superPoder_C2 = carta_populacao_2 + carta_area_2 + carta_pib_2 + carta_pontos_turismo_2 + densidade_populacional_2 + pib_per_capita_2;
+
+    printf("\n\n Fatalité!! SUPER PODER!\n Carta: %s Pontos: %d | Carta: %s Pontos: %d", carta_nome_cidade_1, superPoder_C1 > superPoder_C2, carta_nome_cidade_2, superPoder_C2 > superPoder_C1);
+
+
+    
+
+
+    printf("\n\n - Execução finalizada.\n\n");
 
 
     return 0;
